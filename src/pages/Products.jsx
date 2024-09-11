@@ -4,10 +4,12 @@ import Product from "../components/Product";
 const Products = () => {
   const [products, setProducts] = useState(data.products);
   return (
-    <div>
-      {products.map((product) => (
-        <Product key={product.id} product={product} />
-      ))}
+    <div className="container mt-5">
+      <div className="row row-cols-1 row-cols-md-3 g-4">
+        {products.map((pro) => (
+          <Product key={pro.id} product={pro} />
+        ))}
+      </div>
     </div>
   );
 };
