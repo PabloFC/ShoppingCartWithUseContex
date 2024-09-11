@@ -7,7 +7,7 @@ const Navbar = () => {
         Shop
       </a>
       <a href="#" className="navbar-link fs-5 text-white">
-        <BsCart />
+        <BsCart />0
       </a>
     </div>
   );
