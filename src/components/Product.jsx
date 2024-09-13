@@ -1,4 +1,8 @@
+import { useContext } from "react";
+import { CartContext } from "../Features/ContextProvider";
+
 const Product = ({ product }) => {
+  const { dispatch } = useContext(CartContext);
   return (
     <div>
       <div className="col">
@@ -11,7 +15,13 @@ const Product = ({ product }) => {
           <div className="card-body">
             <h4 className="card-title">{product.title}</h4>
             <h5>{product.price}</h5>
-            <button className="btn btn-primary">Add To cart</button>
+            <button
+              className="btn btn-primary
+            "
+              onClick={() => dispatch({ type: "Add", product: product })}
+            >
+              Add To cart
+            </button>
           </div>
         </div>
       </div>
